@@ -100,6 +100,9 @@ class App extends Component {
   };
 
   isTotalMismatched = () => {
+    if (this.state.paySame) {
+      return false;
+    }
     return this.state.totalBeforeTax !== this.billsSum();
   };
 
